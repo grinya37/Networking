@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		208C6A9A29D79B00008EABEC /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C6A9929D79B00008EABEC /* DataProvider.swift */; };
+		208C6A9C29D8BE99008EABEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C6A9B29D8BE99008EABEC /* SceneDelegate.swift */; };
 		209B114B29800F22000DA05D /* imageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209B114A29800F22000DA05D /* imageProperties.swift */; };
 		A806CF94210B4EA300574064 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806CF93210B4EA300574064 /* ImageViewController.swift */; };
 		A8255C80214103450074F6D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8255C7F214103450074F6D0 /* WebViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		208C6A9929D79B00008EABEC /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Networking/Networking/DataProvider.swift"; sourceTree = "<group>"; };
+		208C6A9B29D8BE99008EABEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		209B114A29800F22000DA05D /* imageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageProperties.swift; sourceTree = "<group>"; };
 		A806CF93210B4EA300574064 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		A8255C7F214103450074F6D0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
+				208C6A9B29D8BE99008EABEC /* SceneDelegate.swift */,
 				A8493E702147D7B7004DE8A8 /* MainViewController.swift */,
 				A8493E762147DC20004DE8A8 /* NetworkManager.swift */,
 				208C6A9929D79B00008EABEC /* DataProvider.swift */,
@@ -174,6 +177,7 @@
 				A806CF94210B4EA300574064 /* ImageViewController.swift in Sources */,
 				208C6A9A29D79B00008EABEC /* DataProvider.swift in Sources */,
 				A8255C80214103450074F6D0 /* WebViewController.swift in Sources */,
+				208C6A9C29D8BE99008EABEC /* SceneDelegate.swift in Sources */,
 				A83C30212108401A00592AE4 /* AppDelegate.swift in Sources */,
 				A8493E712147D7B7004DE8A8 /* MainViewController.swift in Sources */,
 				A8255C8621410DFE0074F6D0 /* TableViewCell.swift in Sources */,
