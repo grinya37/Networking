@@ -10,7 +10,7 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
-    private let url = "https://phonoteka.org/uploads/posts/2022-09/thumbs/1663712542_5-phonoteka-org-p-volk-oboi-na-telefon-krasivo-5.jpg"
+    private let url = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
