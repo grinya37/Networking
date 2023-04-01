@@ -1,11 +1,10 @@
 //
-//  imageProperties.swift
+//  ImageProperties.swift
 //  Networking
 //
-//  Created by Николай Гринько on 24.01.2023.
-//  Copyright © 2023 Alexey Efimov. All rights reserved.
+//  Created by Alexey Efimov on 12.09.2018.
+//  Copyright © 2018 Alexey Efimov. All rights reserved.
 //
-
 
 import UIKit
 
@@ -19,5 +18,4 @@ struct ImageProperties {
         guard let data = image.pngData() else { return nil }
         self.data = data
     }
-    
 }
