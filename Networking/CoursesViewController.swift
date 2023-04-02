@@ -14,7 +14,9 @@ class CoursesViewController: UIViewController {
     private var courseName: String?
     private var courseURL: String?
     private let url = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
-
+    private let postRequestUrl = "https://jsonplaceholder.typicode.com/posts"
+    private let putRequestUrl = "https://jsonplaceholder.typicode.com/posts/1"
+    
     @IBOutlet var tableView: UITableView!
     
     
@@ -39,43 +41,68 @@ class CoursesViewController: UIViewController {
         }
     }
     
-    private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
+    func postRequest() {
         
-        let course = courses[indexPath.row]
-        cell.courseNameLabel.text = course.name
-        
-        if let numberOfLessons = course.numberOfLessons{
-            cell.numberOfLessons.text = "Number of lessons: \(numberOfLessons)"
-        }
-        
-        if let numberOfTests = course.numberOfTests {
-            cell.numberOfTests.text = "Number of tests: \(numberOfTests)"
-        }
-        
-        DispatchQueue.global().async {
-            guard let imageUrl = URL(string: course.imageUrl!) else { return }
-            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+        AlamofireNetworkRequest.postRequest(url: postRequestUrl) { (courses) in
+            
+            self.courses = courses
             
             DispatchQueue.main.async {
-                cell.courseImage.image = UIImage(data: imageData)
+                self.tableView.reloadData()
             }
         }
         
     }
     
-
-
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let webViewController = segue.destination as! WebViewController
-        webViewController.selectedCourse = courseName
+    func putRequest() {
         
-        if let url = courseURL {
-            webViewController.courseURL = url
+        AlamofireNetworkRequest.putRequest(url: putRequestUrl) { (courses) in
+            
+            self.courses = courses
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
-}
+    
+        private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
+            
+            let course = courses[indexPath.row]
+            cell.courseNameLabel.text = course.name
+            
+            if let numberOfLessons = course.numberOfLessons{
+                cell.numberOfLessons.text = "Number of lessons: \(numberOfLessons)"
+            }
+            
+            if let numberOfTests = course.numberOfTests {
+                cell.numberOfTests.text = "Number of tests: \(numberOfTests)"
+            }
+            
+            DispatchQueue.global().async {
+                guard let imageUrl = URL(string: course.imageUrl!) else { return }
+                guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+                
+                DispatchQueue.main.async {
+                    cell.courseImage.image = UIImage(data: imageData)
+                }
+            }
+            
+        }
+        
+        
+        
+        // MARK: - Navigation
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let webViewController = segue.destination as! WebViewController
+            webViewController.selectedCourse = courseName
+            
+            if let url = courseURL {
+                webViewController.courseURL = url
+            }
+        }
+    }
 
 // MARK: Table View Data Source
 
