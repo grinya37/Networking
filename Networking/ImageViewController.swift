@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class ImageViewController: UIViewController {
     
-    private let url = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
+    private let url = "https://oir.mobi/uploads/posts/2020-02/1582105523_66-p-neonovie-volki-83.jpg"
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -31,6 +32,21 @@ class ImageViewController: UIViewController {
             
             self.activityIndicator.stopAnimating()
             self.imageView.image = image
+        }
+    }
+    func fetchDataWithAlamofire() {
+        request(url).responseData { (responseData) in
+            switch responseData.result {
+                case.success(let data):
+                
+                guard let image = UIImage(data: data) else { return }
+                
+                self.activityIndicator.stopAnimating()
+                self.imageView.image = image
+                
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
