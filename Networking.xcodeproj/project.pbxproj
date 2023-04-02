@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		208C6AA229D8E782008EABEC /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C6AA129D8E782008EABEC /* AlamofireNetworkRequest.swift */; };
 		2DEF7F5BB5D50EE45484681C /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5AFBA7A7672202CC23B8C9 /* Pods_Networking.framework */; };
 		A806CF94210B4EA300574064 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806CF93210B4EA300574064 /* ImageViewController.swift */; };
 		A8255C80214103450074F6D0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8255C7F214103450074F6D0 /* WebViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		208C6AA129D8E782008EABEC /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		3627FC4DE13CF09ED9AF482B /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		A806CF93210B4EA300574064 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		A8255C7F214103450074F6D0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
 				A8493E702147D7B7004DE8A8 /* MainViewController.swift */,
+				208C6AA129D8E782008EABEC /* AlamofireNetworkRequest.swift */,
 				A8493E762147DC20004DE8A8 /* NetworkManager.swift */,
 				A855BC1B214F71FE00075CAE /* DataProvider.swift */,
 				A8493E722147D7CA004DE8A8 /* CollectionViewCell.swift */,
@@ -238,6 +241,7 @@
 			files = (
 				A8493E7B214924F1004DE8A8 /* ImageProperties.swift in Sources */,
 				A8493E772147DC20004DE8A8 /* NetworkManager.swift in Sources */,
+				208C6AA229D8E782008EABEC /* AlamofireNetworkRequest.swift in Sources */,
 				A8493E732147D7CA004DE8A8 /* CollectionViewCell.swift in Sources */,
 				A895579E214278DB00355357 /* Course.swift in Sources */,
 				A89557A02142808500355357 /* WebsiteDescription.swift in Sources */,
