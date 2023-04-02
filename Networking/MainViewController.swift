@@ -4,7 +4,8 @@
 //
 //  Created by Alexey Efimov on 11.09.2018.
 //  Copyright © 2018 Alexey Efimov. All rights reserved.
-//
+
+
 
 import UIKit
 import UserNotifications
@@ -18,7 +19,13 @@ enum Actions: String, CaseIterable {
     case uploadImage = "Upload Image"
     case downloadFile = "Download File"
     case ourCoursesAlamofire = "Our Courses (Alamofire)"
-    case responseData = "ResponseData"
+    case responseData = "responseData"
+    case responseString = "responseString"
+    case response = "response"
+    case downloadLargeImage = "Download Large Image"
+    case postAlamofire = "POST with Alamofire"
+    case putRequest = "PutRequest with Alamofire"
+    case uploadImageAlamofire = "Upload Image (Alamofire)"
 }
 
 private let reuseIdentifier = "Cell"
@@ -134,8 +141,20 @@ class MainViewController: UICollectionViewController {
         case .ourCoursesAlamofire:
            performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: self)
         case .responseData:
-        performSegue(withIdentifier: "ResponseData", sender: self)
+        performSegue(withIdentifier: "responseData", sender: self)
             AlamofireNetworkRequest.responseData(url: swiftbookApi)
+        case .responseString:
+            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+        case .response:
+            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+        case .downloadLargeImage:
+            performSegue(withIdentifier: "LargeImage", sender: self)
+        case .postAlamofire:
+            performSegue(withIdentifier: "PostRequest", sender: self)
+        case .putRequest:
+            performSegue(withIdentifier: "PutRequest", sender: self)
+        case .uploadImageAlamofire:
+            AlamofireNetworkRequest.uploadImage(url: uploadImage)
         }
     }
 
@@ -152,15 +171,18 @@ class MainViewController: UICollectionViewController {
             imageVC?.fetchImage()
         case "ResponseData":
             imageVC?.fetchDataWithAlamofire()
+        case "LargeImage":
+            imageVC?.downloadImageWithProgress()
+        case "PostRequest":
+            coursesVC?.postRequest()
+        case "PutRequest":
+            coursesVC?.putRequest()
         default:
             break
         }
     }
     
 }
-
-
-
 
 extension MainViewController {
     

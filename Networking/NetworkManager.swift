@@ -97,7 +97,7 @@ class NetworkManager {
     static func uploadImage(url: String) {
         
         let image = UIImage(named: "Notification")!
-        let httpHeaders = ["Authorization": "Client-ID 1bd22b9ce396a4c"]
+        let httpHeaders = ["Authorization": "Client-ID ea325307e95cee6"]
         guard let imageProperties = ImageProperties(withImage: image, forKey: "image") else { return }
         
         guard let url = URL(string: url) else { return }
