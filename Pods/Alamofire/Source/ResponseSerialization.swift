@@ -103,6 +103,8 @@ extension Request {
 
 // MARK: - Default
 
+@available(iOS 10.0, *)
+@available(iOS 10.0, *)
 extension DataRequest {
     /// Adds a handler to be called once the request has finished.
     ///
@@ -170,6 +172,8 @@ extension DataRequest {
         return self
     }
 }
+@available(iOS 10.0, *)
+@available(iOS 10.0, *)
 
 extension DownloadRequest {
     /// Adds a handler to be called once the request has finished.

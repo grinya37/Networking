@@ -11,8 +11,8 @@ import Alamofire
 
 class ImageViewController: UIViewController {
     
-    //private let url = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
-    private let url = "https://oir.mobi/uploads/posts/2020-02/1582105523_66-p-neonovie-volki-83.jpg"
+    private let url = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
+    //private let url = "https://oir.mobi/uploads/posts/2020-02/1582105523_66-p-neonovie-volki-83.jpg"
     private let largeImageUrl = "https://i.imgur.com/3416rvI.jpg"
     
     
